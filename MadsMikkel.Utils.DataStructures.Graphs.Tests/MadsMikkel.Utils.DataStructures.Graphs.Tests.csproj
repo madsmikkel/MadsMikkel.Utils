@@ -50,14 +50,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="EdgeTests.cs" />
+    <Compile Include="GraphTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VertexTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MadsMikkel.Utils.DataStructures.Graphs\MadsMikkel.Utils.DataStructures.Graphs.csproj">
       <Project>{06b9d2ee-f85a-4110-ade5-d1df8ff2160a}</Project>
       <Name>MadsMikkel.Utils.DataStructures.Graphs</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestEntities\TestEntities.Train.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
