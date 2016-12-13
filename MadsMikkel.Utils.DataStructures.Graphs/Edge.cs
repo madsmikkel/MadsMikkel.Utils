@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
 #if DEBUG
-[assembly: InternalsVisibleTo( "MadsMikkel.Utils.DataStructures.Graphs.Tests" )]
+[assembly: InternalsVisibleTo("MadsMikkel.Utils.DataStructures.Graphs.Tests")]
 #endif
 
 namespace MadsMikkel.Utils.DataStructures.Graphs
@@ -19,6 +14,9 @@ namespace MadsMikkel.Utils.DataStructures.Graphs
 	{
 
 		#region Fields
+		/// <summary>
+		/// The content of this edge.
+		/// </summary>
 		protected TEdge content;
 		#endregion
 
@@ -28,10 +26,15 @@ namespace MadsMikkel.Utils.DataStructures.Graphs
 		/// Initializes a new instance of this type with the specified content.
 		/// </summary>
 		/// <param name="content">The content to be contained within the edge.</param>
-		public Edge( TEdge content )
+		public Edge(TEdge content)
 		{
 			Content = content;
 		}
+		#endregion
+
+
+		#region Methods
+		public override string ToString() => $"\tEdge content: {content}\n";
 		#endregion
 
 
